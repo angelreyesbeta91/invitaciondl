@@ -344,12 +344,16 @@
 
   /* ---- dress code ---- */
   .dresscode{ text-align:center; }
-  .swatch-row{ display:flex; justify-content:center; gap:10px; margin:22px 0 30px; align-items:center; }
+  .swatch-row{ display:flex; justify-content:center; gap:10px; margin:22px 0 30px; align-items:center; flex-direction: column;} 
   .swatch{ width:34px; height:34px; border-radius:50%; border:2px solid var(--cream); box-shadow:0 0 0 1.5px var(--line); }
   .swatch.black{ background:#171512; }
+  .swatch.black::after{
+    content:"Negra"; position:absolute; top:35%; right:46%;
+    font-family:'DM Mono',monospace; font-size:.58rem; letter-spacing:.05em; white-space:nowrap; color:var(--cream);
+  }
   .swatch.pink{ background:var(--pink); position:relative; }
   .swatch.pink::after{
-    content:"reservado"; position:absolute; top:110%; left:50%; transform:translateX(-50%);
+    content:"Rerservado"; position:absolute; top:110%; left:50%; transform:translateX(-50%);
     font-family:'DM Mono',monospace; font-size:.58rem; letter-spacing:.05em; white-space:nowrap; color:var(--ink-soft);
   }
   .kit-grid{
@@ -570,7 +574,6 @@
 
       <div class="swatch-row">
         <div class="swatch black"></div>
-        <div class="swatch pink"></div>
       </div>
 
       <div class="kit-grid">
